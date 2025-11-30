@@ -22,7 +22,7 @@ export const AdventAudioItem = ({story}: AdventAudioItemProps) => {
             {available ? (
                 <div className={"flex flex-col w-full gap-2 items-center"}>
                     <div className={"flex flex-row gap-2"}>
-                        <Label>{story.day} </Label>
+                        {story.day != 0 && <Label>{story.day} </Label>}
                         <Label>{story.title}</Label>
                     </div>
                     <Label className={"font-light"}>{story.subtitle}</Label>
