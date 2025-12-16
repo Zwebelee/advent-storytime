@@ -3,6 +3,7 @@ import {Card} from "@/components/ui/card.tsx";
 import {Label} from "@/components/ui/label.tsx";
 
 interface Story {
+    id: number;
     day: number;
     date: string;
     title: string;
@@ -22,7 +23,7 @@ export const AdventAudioItem = ({story}: AdventAudioItemProps) => {
             {available ? (
                 <div className={"flex flex-col w-full gap-2 items-center"}>
                     <div className={"flex flex-row gap-2"}>
-                        {story.day != 0 && <Label>{story.day} </Label>}
+                        {story.id !== 0 && story.id !== 25 && <Label>{story.day} </Label>}
                         <Label>{story.title}</Label>
                     </div>
                     <Label className={"font-light"}>{story.subtitle}</Label>

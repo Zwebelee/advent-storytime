@@ -5,7 +5,7 @@ export const AdventAudioList = () => {
     return (
         <div className="flex flex-col gap-4 w-full overflow-auto flex-1">
             {stories.map((story: any) => (
-                <AdventAudioItem key={story.day} story={story} />
+                <AdventAudioItem key={story.index} story={story} />
             ))}
         </div>
     );
